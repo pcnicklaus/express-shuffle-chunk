@@ -10,6 +10,20 @@
     <h1>{{ title }}</h1>
     <p>Welcome to {{ title }}</p>
 
+    <div class="row">
+      <div class="col-md-6">
+      <form class="form" method="post" action="/">
+        <input class="form-control" name="people" type="string" placeholder="people separated by commas" required>
+        <input class="form-control" name="number" type="number" placeholder="number of chunks" required>
+      <button type="submit" class="btn btn-danger">Get Groups!</button>
+      </div>
+    </div>
   </div>
+
+  <ol>
+  {% for result in results %}
+    <li> {{ result }} </li>
+  {% endfor %}
+  </ol>
 
 {% endblock %}
